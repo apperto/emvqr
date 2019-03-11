@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"bitbucket.org/apperto/emvqr/crc16"
+	"github.com/apperto/emvqr/crc16"
 )
 
 // Reference: https://www.mastercardlabs.com/masterpass-qr/
