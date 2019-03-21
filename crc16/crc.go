@@ -2,6 +2,7 @@ package crc16
 
 import (
 	"encoding/binary"
+	"fmt"
 	"strconv"
 )
 
@@ -52,7 +53,7 @@ func calculateChecksum(p []byte) uint16 {
 }
 
 func Checksum(data []byte) string {
-	return strconv.FormatUint(uint64(calculateChecksum(data)), 16)
+	return fmt.Sprintf("%04v", strconv.FormatUint(uint64(calculateChecksum(data)), 16))
 }
 
 func ValidateChecksum(dataWithChecksum []byte) bool {
